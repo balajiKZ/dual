@@ -1,0 +1,20 @@
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label color="dark" floating>Please Provide the Device IP</ion-label>
+      <ion-input [(ngModel)]="ipAddress"></ion-input>
+    </ion-item>
+    <ion-item text-center>
+      <button ion-button color="dark" default (click)="configure()">
+        Configure
+      </button>
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines>
+    <ion-item *ngFor="let ipEach of ipArray" text-center>
+      <button ion-button color="primary" default (click)="ipClick(ipEach)">
+        {{ipEach}}
+      </button>
+    </ion-item>
+  </ion-list>
+</ion-content>
